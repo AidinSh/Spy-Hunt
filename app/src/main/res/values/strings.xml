@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Spy Hunt</string>
+    <array name="places">
+        <item>آرایشگاه</item>
+        <item>استخر</item>
+        <item>آسایشگاه</item>
+        <item>قصابی</item>
+        <item>کفاشی</item>
+        <item>سوپر مارکت</item>
+        <item>پاساژ</item>
+        <item>آسیا</item>
+        <item>اروپا</item>
+        <item>تالار عروسی</item>
+        <item>مدرسه</item>
+        <item>مهد کودک</item>
+    </array>
+</resources>
