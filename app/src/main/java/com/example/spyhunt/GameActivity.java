@@ -30,36 +30,23 @@ public class GameActivity extends AppCompatActivity {
         place = getIntent().getStringExtra("place");
 
         while(counter < players*2){
-            if((counter%2) != 0){
+
                 btnNextPlayer.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v1) {
-                        tvPlace.setText("گوشی را به نفر بعدی بدهید");
-                        btnNextPlayer.setText("نمایش محل قرار");
-                        counter++;
-                    }
-                });
-            }else{
-                btnNextPlayer.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v2) {
-                        tvPlace.setText(place);
-                        btnNextPlayer.setText("نفر بعدی");
-                        counter++;
+                        if((counter%2) != 0) {
+                            tvPlace.setText("گوشی را به نفر بعدی بدهید");
+                            tvPlace.setVisibility(View.VISIBLE);
+                            btnNextPlayer.setText("نمایش محل قرار");
+                            counter++;
+                        }else {
+                            tvPlace.setText(place);
+                            tvPlace.setVisibility(View.VISIBLE);
+                            btnNextPlayer.setText("نفر بعدی");
+                            counter++;
+                        }
                     }
                 });
             }
-            tvPlace.setVisibility(View.VISIBLE);
         }
-
-        btnNextPlayer.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v3) {
-
-                Intent intent = new Intent(GameActivity.this, com.example.spyhunt.Timer.class);
-                startActivity(intent);
-            }
-        });
-
     }
-}
