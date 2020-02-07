@@ -14,7 +14,10 @@ public class MainActivity extends AppCompatActivity {
     EditText etPlayers;
     Button btnStart, btnHowToPlay;
     int players;
-    String[] places = getResources().getStringArray();
+    String place;
+    final int placeIndex = (int)(Math.random() * (9));
+
+    String[] places = {"آرایشگاه", "آسایشگاه", "استخر", "کفاشی", "بقالی", "پاساژ", "قصابی", "مدرسه", "مهد کودک", "تعمیرگاه"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
         btnStart = findViewById(R.id.btnStart);
         btnHowToPlay = findViewById(R.id.btnHowToPlay);
 
+        place = places[placeIndex];
 
         btnStart.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -39,8 +43,17 @@ public class MainActivity extends AppCompatActivity {
 
                     Intent intent = new Intent(MainActivity.this, com.example.spyhunt.GameActivity.class);
                     intent.putExtra("players", players);
+                    intent.putExtra("place", place);
                     startActivity(intent);
                 }
+            }
+        });
+
+        btnHowToPlay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, com.example.spyhunt.HowToPlay.class);
+                startActivity(intent);
             }
         });
 
