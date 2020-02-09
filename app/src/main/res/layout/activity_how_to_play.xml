@@ -12,24 +12,52 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="100dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="20dp"
         android:layout_marginRight="100dp"
         android:gravity="center_horizontal"
-        android:text="راهنمای بازی"
+        android:text="داستان بازی"
         android:textColor="@color/colorAccent"
         android:textSize="30sp" />
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="fill_horizontal|fill_vertical"
         android:layout_marginLeft="50dp"
         android:layout_marginTop="30dp"
         android:layout_marginRight="50dp"
         android:layout_marginBottom="20dp"
         android:gravity="center_horizontal"
-        android:text="TextView" />
+        android:text="@string/story"
+        android:textAlignment="gravity"
+        android:textDirection="rtl"
+        android:textSize="16sp" />
 
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="50dp"
+        android:gravity="center_horizontal"
+        android:text="نحوه بازی"
+        android:textColor="@color/colorAccent"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="50dp"
+        android:gravity="center_horizontal"
+        android:text="@string/how_to_play"
+        android:textSize="16sp" />
     <Button
         android:id="@+id/btnBack"
         android:layout_width="match_parent"
