@@ -17,15 +17,16 @@ public class Timer extends AppCompatActivity {
 
         tvTimer = findViewById(R.id.tvTimer);
 
-       /* final CountDownTimer timer = new CountDownTimer(30000, 1000) {
+        final CountDownTimer timer = new CountDownTimer(300000, 1000) {
 
             public void onTick(long millisUntilFinished) {
-                tvTimer.setText("seconds remaining: " + millisUntilFinished / 1000);
+                int minutesUntilFinish = (int) millisUntilFinished/1000/60;
+                tvTimer.setText(minutesUntilFinish + ":" + ((millisUntilFinished - (minutesUntilFinish*60))/ 1000));
             }
 
             public void onFinish() {
                 tvTimer.setText("زمان به پایان رسید!");
             }
-        }.start();*/
+        }.start();
     }
 }

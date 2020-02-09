@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
                     players = Integer.parseInt(etPlayers.getText().toString().trim());
 
                     Intent intent = new Intent(MainActivity.this, com.example.spyhunt.GameActivity.class);
-                    intent.putExtra("players", players);
+                    intent.putExtra("playersCount", players);
                     intent.putExtra("place", place);
                     startActivity(intent);
                 }

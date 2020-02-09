@@ -12,7 +12,8 @@ public class GameActivity extends AppCompatActivity {
 
     TextView tvPlace;
     Button btnNextPlayer;
-    int players, spy, counter=1;
+    int playersCount, spyIndex, currentPlayer =1;
+    boolean hasSeenPlace=false;
     String place;
 
     @Override
@@ -20,33 +21,41 @@ public class GameActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
 
-        spy = (int) (Math.random() * (players - 1) + 1 );
-
         tvPlace = findViewById(R.id.tvPlace);
         btnNextPlayer = findViewById(R.id.btnNextPlayer);
 
-
-        players = getIntent().getIntExtra("players", 5);
+        playersCount = getIntent().getIntExtra("playersCount", 5);
         place = getIntent().getStringExtra("place");
-
-        while(counter < players*2){
+        spyIndex = (int) (Math.random() * (playersCount - 1) + 1 );
 
                 btnNextPlayer.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v1) {
-                        if((counter%2) != 0) {
-                            tvPlace.setText("گوشی را به نفر بعدی بدهید");
-                            tvPlace.setVisibility(View.VISIBLE);
-                            btnNextPlayer.setText("نمایش محل قرار");
-                            counter++;
+                        if(currentPlayer <= playersCount) {
+                            if (!hasSeenPlace){
+                                if(currentPlayer == spyIndex){
+                                    tvPlace.setText("شما جاسوس هستید!");
+                                }else{
+                                    tvPlace.setText(place);
+                                }
+                                if (currentPlayer == playersCount){
+                                    btnNextPlayer.setText("شروع بازی");
+                                }
+                                btnNextPlayer.setText("نفر بعدی");
+                                hasSeenPlace=true;
+                                currentPlayer++;
+                            }else {
+                                tvPlace.setText("گوشی را به نفر بعدی بدهید");
+                                btnNextPlayer.setText("نمایش محل قرار");
+                                hasSeenPlace=false;
+                            }
                         }else {
-                            tvPlace.setText(place);
-                            tvPlace.setVisibility(View.VISIBLE);
-                            btnNextPlayer.setText("نفر بعدی");
-                            counter++;
+
+                            Intent intent = new Intent(GameActivity.this, com.example.spyhunt.Timer.class);
+                            startActivity(intent);
                         }
                     }
                 });
             }
-        }
+
     }
