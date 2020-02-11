@@ -1,4 +1,4 @@
-package com.example.spyhunt;
+package com.dumagames.spyhunt;
 
 import android.content.Context;
 

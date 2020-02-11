@@ -1,4 +1,4 @@
-package com.example.spyhunt;
+package com.dumagames.spyhunt;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -21,7 +21,7 @@ public class HowToPlay extends AppCompatActivity {
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(HowToPlay.this, com.example.spyhunt.MainActivity.class);
+                Intent intent = new Intent(HowToPlay.this, com.dumagames.spyhunt.MainActivity.class);
                 startActivity(intent);
             }
         });

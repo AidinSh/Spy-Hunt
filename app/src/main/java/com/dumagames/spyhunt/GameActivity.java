@@ -1,4 +1,4 @@
-package com.example.spyhunt;
+package com.dumagames.spyhunt;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -51,7 +51,7 @@ public class GameActivity extends AppCompatActivity {
                                 hasSeenPlace=false;
                             }
                         }else {
-                            Intent intent = new Intent(GameActivity.this, com.example.spyhunt.Timer.class);
+                            Intent intent = new Intent(GameActivity.this, com.dumagames.spyhunt.Timer.class);
                             startActivity(intent);
                         }
                     }

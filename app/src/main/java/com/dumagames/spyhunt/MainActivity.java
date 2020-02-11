@@ -1,4 +1,4 @@
-package com.example.spyhunt;
+package com.dumagames.spyhunt;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
                 else {
                     players = Integer.parseInt(etPlayers.getText().toString().trim());
 
-                    Intent intent = new Intent(MainActivity.this, com.example.spyhunt.GameActivity.class);
+                    Intent intent = new Intent(MainActivity.this, com.dumagames.spyhunt.GameActivity.class);
                     intent.putExtra("playersCount", players);
                     intent.putExtra("place", place);
                     startActivity(intent);
@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
         btnHowToPlay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, com.example.spyhunt.HowToPlay.class);
+                Intent intent = new Intent(MainActivity.this, com.dumagames.spyhunt.HowToPlay.class);
                 startActivity(intent);
             }
         });

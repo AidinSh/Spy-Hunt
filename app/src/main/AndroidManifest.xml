@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.spyhunt">
+    package="com.dumagames.spyhunt">
 
     <application
         android:allowBackup="true"
@@ -9,10 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Timer"></activity>
-        <activity android:name=".GameActivity" />
-        <activity android:name=".HowToPlay" />
-        <activity android:name=".MainActivity">
+        <activity android:name="com.dumagames.spyhunt.Timer"></activity>
+        <activity android:name="com.dumagames.spyhunt.GameActivity" />
+        <activity android:name="com.dumagames.spyhunt.HowToPlay" />
+        <activity android:name="com.dumagames.spyhunt.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

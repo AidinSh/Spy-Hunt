@@ -1,4 +1,4 @@
-package com.example.spyhunt;
+package com.dumagames.spyhunt;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,8 +8,6 @@ import android.os.CountDownTimer;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-
-import java.sql.Time;
 
 public class Timer extends AppCompatActivity {
 
@@ -29,7 +27,7 @@ public class Timer extends AppCompatActivity {
         btnMenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Timer.this, com.example.spyhunt.MainActivity.class);
+                Intent intent = new Intent(Timer.this, com.dumagames.spyhunt.MainActivity.class);
                 startActivity(intent);
             }
         });
