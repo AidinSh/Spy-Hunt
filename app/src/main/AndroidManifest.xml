@@ -10,7 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".Timer"></activity>
-        <activity android:name=".NextPlayerActivity" />
         <activity android:name=".GameActivity" />
         <activity android:name=".HowToPlay" />
         <activity android:name=".MainActivity">

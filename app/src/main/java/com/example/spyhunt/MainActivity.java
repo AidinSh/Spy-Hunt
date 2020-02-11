@@ -7,12 +7,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
     EditText etPlayers;
     Button btnStart, btnHowToPlay;
+    TextView tvVersion;
     int players;
     String place;
     final int placeIndex = (int)(Math.random() * (9));
@@ -27,6 +29,8 @@ public class MainActivity extends AppCompatActivity {
         etPlayers = findViewById(R.id.etPlayers);
         btnStart = findViewById(R.id.btnStart);
         btnHowToPlay = findViewById(R.id.btnHowToPlay);
+        tvVersion = findViewById(R.id.tvVersion);
+        tvVersion.setText("version : " + BuildConfig.VERSION_NAME);
 
         place = places[placeIndex];
 

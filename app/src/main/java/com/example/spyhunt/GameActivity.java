@@ -40,8 +40,9 @@ public class GameActivity extends AppCompatActivity {
                                 }
                                 if (currentPlayer == playersCount){
                                     btnNextPlayer.setText("شروع بازی");
+                                }else {
+                                    btnNextPlayer.setText("نفر بعدی");
                                 }
-                                btnNextPlayer.setText("نفر بعدی");
                                 hasSeenPlace=true;
                                 currentPlayer++;
                             }else {
@@ -50,7 +51,6 @@ public class GameActivity extends AppCompatActivity {
                                 hasSeenPlace=false;
                             }
                         }else {
-
                             Intent intent = new Intent(GameActivity.this, com.example.spyhunt.Timer.class);
                             startActivity(intent);
                         }
