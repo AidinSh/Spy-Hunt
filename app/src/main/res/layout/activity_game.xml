@@ -9,11 +9,10 @@
 
     <TextView
         android:id="@+id/tvPlace"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="50dp"
+        android:layout_gravity="center_horizontal"
         android:layout_marginTop="150dp"
-        android:layout_marginRight="50dp"
         android:layout_marginBottom="50dp"
         android:gravity="center_horizontal"
         android:textColor="@color/colorAccent"
@@ -21,11 +20,10 @@
 
     <Button
         android:id="@+id/btnNextPlayer"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="100dp"
+        android:layout_gravity="center_horizontal"
         android:layout_marginTop="50dp"
-        android:layout_marginRight="100dp"
         android:text="دیدن محل قرار"
         android:textColor="@color/colorAccent"
         android:textSize="25sp"

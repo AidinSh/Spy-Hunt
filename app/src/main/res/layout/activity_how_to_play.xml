@@ -9,11 +9,10 @@
 
     <TextView
         android:id="@+id/tvHowToPlay"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="100dp"
+        android:layout_gravity="center_horizontal"
         android:layout_marginTop="20dp"
-        android:layout_marginRight="100dp"
         android:gravity="center_horizontal"
         android:text="داستان بازی"
         android:textColor="@color/colorAccent"
@@ -24,9 +23,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="fill_horizontal|fill_vertical"
-        android:layout_marginLeft="50dp"
+        android:layout_marginLeft="20dp"
         android:layout_marginTop="30dp"
-        android:layout_marginRight="50dp"
+        android:layout_marginRight="20dp"
         android:layout_marginBottom="20dp"
         android:gravity="center_horizontal"
         android:text="@string/story"
@@ -37,11 +36,10 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="50dp"
+        android:layout_gravity="center_horizontal"
         android:layout_marginTop="20dp"
-        android:layout_marginRight="50dp"
         android:gravity="center_horizontal"
         android:text="نحوه بازی"
         android:textColor="@color/colorAccent"
@@ -52,21 +50,21 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginLeft="50dp"
+        android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
-        android:layout_marginRight="50dp"
+        android:layout_marginRight="20dp"
         android:gravity="center_horizontal"
         android:text="@string/how_to_play"
         android:textSize="18sp" />
+
     <Button
         android:id="@+id/btnBack"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="100dp"
+        android:layout_gravity="center_horizontal"
         android:layout_marginTop="20dp"
-        android:layout_marginRight="100dp"
         android:text="بازگشت"
         android:textColor="@color/colorAccent"
-        android:textStyle="bold"
-        android:textSize="25sp" />
+        android:textSize="25sp"
+        android:textStyle="bold" />
 </LinearLayout>
