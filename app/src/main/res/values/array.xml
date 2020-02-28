@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="places_persian">
+        <item>بقالی</item>
+        <item>استخر</item>
+        <item>مهد کودک</item>
+        <item>مدرسه</item>
+        <item>آسایشگاه</item>
+        <item>پالایشگاه</item>
+        <item>کتابخانه</item>
+        <item>کفاشی</item>
+        <item>نجاری</item>
+        <item>مکانیکی</item>
+        <item>دانشگاه</item>
+        <item>بیمارستان</item>
+        <item>مسجد</item>
+        <item>استادیوم</item>
+        <item>کافه</item>
+        <item>پاساژ</item>
+        <item>تیمارستان</item>
+        <item>قبرستان</item>
+        <item>اسباب بازی فروشی</item>
+        <item>مزرعه</item>
+        <item>گاوداری</item>
+        <item>داروخانه</item>
+        <item>دادگاه</item>
+        <item>رستوران</item>
+        <item>بانک</item>
+        <item>باغ وحش</item>
+        <item>جنگل</item>
+        <item>ساحل دریا</item>
+        <item>کویر</item>
+        <item>فرودگاه</item>
+        <item>شهر بازی</item>
+        <item>تالار عروسی</item>
+        <item>سینما</item>
+        <item>موزه</item>
+        <item>آسیا</item>
+        <item>اروپا</item>
+        <item>آمریکا</item>
+        <item>آفریقا</item>
+        <item>پمپ بنزین</item>
+        <item>مترو</item>
+    </string-array>
+</resources>

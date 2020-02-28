@@ -17,14 +17,15 @@ public class MainActivity extends AppCompatActivity {
     TextView tvVersion;
     int players;
     String place;
-    final int placeIndex = (int)(Math.random() * (9));
-
-    String[] places = {"آرایشگاه", "آسایشگاه", "استخر", "کفاشی", "بقالی", "پاساژ", "قصابی", "مدرسه", "مهد کودک", "تعمیرگاه"};
+    String[] places_persian;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        places_persian = getResources().getStringArray(R.array.places_persian);
+        final int placeIndex = (int)(Math.random() * (places_persian.length));
 
         etPlayers = findViewById(R.id.etPlayers);
         btnStart = findViewById(R.id.btnStart);
@@ -32,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         tvVersion = findViewById(R.id.tvVersion);
         tvVersion.setText("version : " + BuildConfig.VERSION_NAME);
 
-        place = places[placeIndex];
+        place = places_persian[placeIndex];
 
         btnStart.setOnClickListener(new View.OnClickListener() {
             @Override
