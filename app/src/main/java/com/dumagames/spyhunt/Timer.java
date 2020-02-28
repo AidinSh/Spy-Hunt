@@ -12,7 +12,7 @@ import android.widget.TextView;
 public class Timer extends AppCompatActivity {
 
     TextView tvTimer, tvTimerText;
-    Button btnMenu;
+    Button btnMenu, btnRestart;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +22,7 @@ public class Timer extends AppCompatActivity {
         tvTimer = findViewById(R.id.tvTimer);
         tvTimerText = findViewById(R.id.tvTimerText);
         btnMenu = findViewById(R.id.btnMenu);
+        btnRestart = findViewById(R.id.btnRestart);
 
         btnMenu.setVisibility(View.GONE);
         btnMenu.setOnClickListener(new View.OnClickListener() {
@@ -31,8 +32,15 @@ public class Timer extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        btnRestart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Timer.this, com.dumagames.spyhunt.MainActivity.class);
+                startActivity(intent);
+            }
+        });
 
-        final CountDownTimer timer = new CountDownTimer(300000, 1000) {
+        final CountDownTimer timer = new CountDownTimer(30000, 1000) {
 
             public void onTick(long millisUntilFinished) {
                 int minutesUntilFinish = (int) millisUntilFinished/1000/60;
@@ -45,6 +53,7 @@ public class Timer extends AppCompatActivity {
                 tvTimer.setTextSize(40);
                 tvTimerText.setVisibility(View.INVISIBLE);
                 btnMenu.setVisibility(View.VISIBLE);
+                btnRestart.setVisibility(View.GONE);
             }
         }.start();
     }
