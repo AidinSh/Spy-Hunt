@@ -32,6 +32,7 @@ public class Timer extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
         btnRestart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -40,7 +41,7 @@ public class Timer extends AppCompatActivity {
             }
         });
 
-        final CountDownTimer timer = new CountDownTimer(30000, 1000) {
+        final CountDownTimer timer = new CountDownTimer(300000, 1000) {
 
             public void onTick(long millisUntilFinished) {
                 int minutesUntilFinish = (int) millisUntilFinished/1000/60;

@@ -12,10 +12,10 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    EditText etPlayers;
+    EditText etPlayers, etSpies;
     Button btnStart, btnHowToPlay;
     TextView tvVersion;
-    int players;
+    int players, spies;
     String place;
     String[] places_persian;
 
@@ -26,10 +26,13 @@ public class MainActivity extends AppCompatActivity {
 
         places_persian = getResources().getStringArray(R.array.places_persian);
         final int placeIndex = (int)(Math.random() * (places_persian.length));
-
+        //Edit Texts
         etPlayers = findViewById(R.id.etPlayers);
+        etSpies = findViewById(R.id.etSpies);
+        //Buttons
         btnStart = findViewById(R.id.btnStart);
         btnHowToPlay = findViewById(R.id.btnHowToPlay);
+        //Text Views
         tvVersion = findViewById(R.id.tvVersion);
         tvVersion.setText("version : " + BuildConfig.VERSION_NAME);
 
@@ -46,11 +49,20 @@ public class MainActivity extends AppCompatActivity {
                 else {
                     players = Integer.parseInt(etPlayers.getText().toString().trim());
 
+                    if (etSpies.getText().toString().isEmpty()){
+                        spies = (players/6)+1;
+                    }else {
+                        spies = Integer.parseInt(etSpies.getText().toString().trim());
+                    }
+
                     Intent intent = new Intent(MainActivity.this, com.dumagames.spyhunt.GameActivity.class);
                     intent.putExtra("playersCount", players);
+                    intent.putExtra("spyCount", spies);
                     intent.putExtra("place", place);
                     startActivity(intent);
                 }
+
+
             }
         });
 

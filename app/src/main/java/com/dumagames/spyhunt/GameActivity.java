@@ -8,11 +8,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import java.util.Random;
+
 public class GameActivity extends AppCompatActivity {
 
     TextView tvPlace;
     Button btnNextPlayer;
-    int playersCount, spyIndex, currentPlayer =1;
+    int playersCount, spyCount, spyIndex, currentPlayer =0;
     boolean hasSeenPlace=false;
     String place;
 
@@ -25,20 +27,33 @@ public class GameActivity extends AppCompatActivity {
         btnNextPlayer = findViewById(R.id.btnNextPlayer);
 
         playersCount = getIntent().getIntExtra("playersCount", 5);
+        spyCount = getIntent().getIntExtra("spyCount", 1);
         place = getIntent().getStringExtra("place");
-        spyIndex = (int) (Math.random() * (playersCount - 1) + 1 );
 
+        final boolean spyIndicator[] = new boolean[playersCount];
+
+        for (int i=0; i<playersCount; i++){
+            spyIndicator[i] = false;
+        }
+        int spyCounter=1;
+        while (spyCounter<=spyCount){
+            spyIndex = (int) (Math.random() * (playersCount - 1) + 1 );
+            if (!spyIndicator[spyIndex]){
+                spyIndicator[spyIndex] = true;
+                spyCounter++;
+            }
+        }
                 btnNextPlayer.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v1) {
-                        if(currentPlayer <= playersCount) {
+                        if(currentPlayer < playersCount) {
                             if (!hasSeenPlace){
-                                if(currentPlayer == spyIndex){
+                                if(spyIndicator[currentPlayer]){
                                     tvPlace.setText("شما جاسوس هستید!");
                                 }else{
                                     tvPlace.setText(place);
                                 }
-                                if (currentPlayer == playersCount){
+                                if (currentPlayer == playersCount-1){
                                     btnNextPlayer.setText("شروع بازی");
                                 }else {
                                     btnNextPlayer.setText("نفر بعدی");
@@ -57,5 +72,4 @@ public class GameActivity extends AppCompatActivity {
                     }
                 });
             }
-
     }
