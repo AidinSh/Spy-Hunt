@@ -9,10 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.dumagames.spyhunt.Timer"></activity>
-        <activity android:name="com.dumagames.spyhunt.GameActivity" />
-        <activity android:name="com.dumagames.spyhunt.HowToPlay" />
-        <activity android:name="com.dumagames.spyhunt.MainActivity">
+        <activity android:name=".TimerWithName"></activity>
+        <activity android:name=".GameActivityWithName" />
+        <activity android:name=".Timer" />
+        <activity android:name=".GameActivity" />
+        <activity android:name=".HowToPlay" />
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
