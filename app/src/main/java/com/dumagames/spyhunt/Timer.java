@@ -57,5 +57,12 @@ public class Timer extends AppCompatActivity {
                 btnRestart.setVisibility(View.GONE);
             }
         }.start();
+
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(Timer.this, com.dumagames.spyhunt.MainActivity.class);
+        startActivity(intent);
     }
 }

@@ -99,4 +99,9 @@ public class GameActivityWithName extends AppCompatActivity {
             }
         });
     }
+
+    @Override
+    public void onBackPressed() {
+
+    }
 }

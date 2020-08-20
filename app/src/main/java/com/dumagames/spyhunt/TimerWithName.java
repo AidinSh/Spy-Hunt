@@ -83,4 +83,10 @@ public class TimerWithName extends AppCompatActivity {
         });
 
     }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(TimerWithName.this, com.dumagames.spyhunt.MainActivity.class);
+        startActivity(intent);
+    }
 }
